@@ -8,7 +8,7 @@ This project is a **full-stack Todo application** built using **Ruby on Rails** 
 - **Backend:** Ruby on Rails, Kaminari (pagination)
 - **Database:** PostgreSQL
 - **API Communication:** RESTful architecture
-- - *Tests:** Rspec
+- **Tests:** Rspec
 
 ## 📂 Project Structure
 ```
