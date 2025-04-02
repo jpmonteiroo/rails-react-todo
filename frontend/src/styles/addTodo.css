@@ -1,0 +1,37 @@
+.add-todo {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.add-input {
+  flex: 1;
+  height: 40px;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.add-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.add-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.add-button:hover {
+  background: #0056b3;
+}

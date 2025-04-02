@@ -1,0 +1,84 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.modal-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-20px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.modal-overlay.show .modal-content {
+  transform: translateY(0);
+}
+
+.close-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  color: #555;
+  transition: color 0.2s ease-in-out;
+}
+
+.close-button:hover {
+  color: #d9534f;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border 0.3s ease-in-out;
+}
+
+.modal-content input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.save-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background 0.3s ease-in-out;
+}
+
+.save-button:hover {
+  background: #0056b3;
+}
