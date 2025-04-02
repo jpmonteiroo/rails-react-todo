@@ -6,7 +6,7 @@ This project is a **full-stack Todo application** built using **Ruby on Rails** 
 ## 🛠 Tech Stack
 - **Frontend:** React.js, Axios, CSS
 - **Backend:** Ruby on Rails, Kaminari (pagination)
-- **Database:** PostgreSQL (or SQLite for development)
+- **Database:** PostgreSQL
 - **API Communication:** RESTful architecture
 
 ## 📂 Project Structure
