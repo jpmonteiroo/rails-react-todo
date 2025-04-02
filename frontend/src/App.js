@@ -12,12 +12,10 @@ function App() {
   const [pagination, setPagination] = useState({});
 
   useEffect(() => {
-    console.log("🟢 useEffect disparado. Página atual:", currentPage);
     fetchTodos(currentPage);
   }, [currentPage]);
 
   const fetchTodos = async (page) => {
-    console.log("Enviando requisição para:", `/api/todos?page=${page}`); // Debug
     try {
       const response = await get_todos(page);
       setTodos(response.todos);
@@ -29,14 +27,14 @@ function App() {
 
   const addTodo = async (todo_name, description) => {
     await create_todo(todo_name, description);
-    setCurrentPage(1);  // Garante que a atualização volte para a página 1
+    setCurrentPage(1);
     fetchTodos(1);
   };
 
   const deleteTodoHandler = async (id) => {
     try {
       await delete_todo(id);
-      fetchTodos(currentPage); // Recarrega os dados corretamente
+      fetchTodos(currentPage);
     } catch (error) {
       console.error("Error deleting todo:", error);
     }
@@ -48,8 +46,6 @@ function App() {
         <h1 className="title">Todo App</h1>
         <AddTodo addTodo={addTodo} />
         <TodoList todos={todos} deleteTodo={deleteTodoHandler} />
-
-        {/* Pagination Controls */}
         <div className="pagination">
           <button
             onClick={() => setCurrentPage(pagination.prev_page)}
